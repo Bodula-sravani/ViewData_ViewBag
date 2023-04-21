@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+    //<p>Id: @((ViewData["person"] as person).Id), Name: @((ViewData["person"] as person).Name), DOB: @((ViewData["person"] as person).DOB)</p>
+    var viewDataPerson = ViewData["person"] as person;
+    //<p>Id: @(viewDataPerson.Id), Name: @(viewDataPerson.Name), DOB: @(viewDataPerson.DOB)</p>
+    //<p>Id: @(ViewData["person"].Id), Name: @(ViewData["person"].Name), DOB: @(ViewData["person"].DOB)</p>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p> @ViewBag.Message - using view bag </p>
+    <p>@ViewData["Message"] -using view data</p>  @*Without casting*@
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+
+<div>
+    <p>Using View Bag</p>
+    <p>Id: @ViewBag.person.Id, Name: @ViewBag.person.Name, DOB: @ViewBag.person.DOB</p>
+    <br/>
+    <p>Using View Data</p> 
+    <p>Id: @(viewDataPerson.Id), Name: @(viewDataPerson.Name), DOB: @(viewDataPerson.DOB)</p>
+</div>
+
