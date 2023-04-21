@@ -46,7 +46,7 @@ namespace Demo.Controllers
         public IActionResult Privacy()
 		{
 
-
+			// The properties become null here
             Console.WriteLine("IN PRIVACY ACTION ViewBag: "+ViewBag.Message);
             Console.WriteLine("IN PRIVACY ACTION ViewData: "+ViewData["Message"]);
             return View();
